@@ -1,2 +1,1 @@
-# test #
-application for detecting oil slicks on images
+# application for detecting oil slicks on images
