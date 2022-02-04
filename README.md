@@ -8,3 +8,4 @@ The analysis process is divided into several stages:
 >Comparing the number of black pixels and a given number (total number of pixels in a square multiplied by a certain factor, default 0.03)
 4. Determining the result and coloring the marked squares if necessary
 >After searching for oil squares, we get a list of numbers. If it is not empty, then there is oil.
+## User manual
