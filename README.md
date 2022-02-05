@@ -1,22 +1,22 @@
-# Application for detecting oil slicks on images #
-The analysis process is divided into several stages:
-1. Highlight black color in the picture
->This happens by applying a color filter to the frame in a given range (min_p, max_p)
-2. Splitting the filtered image into squares 
->The size of the squares can be changed. By default it is 0.063 of the image width
-3. Searching for oil in squares 
->Comparing the number of black pixels and a given number (total number of pixels in a square multiplied by a certain factor, default 0.03)
-4. Determining the result and coloring the marked squares if necessary
->After searching for oil squares, we get a list of numbers. If it is not empty, then there is oil.
+# Приложение для обнаружения нефтяных разливов #
+Процесс анализа разбит на несколько этапов:
+1. Выделение черного цвета на снимке 
+>Это выолняется путем наложения на кадр цветового фильтра в заданном диапазоне
+2. Разбиение отфильтрованной картинки на квадраты 
+>Разамер квадратов можно изменять. По умолчанию он составляет 0.063 от ширины изображения
+3. Поиск нефти в квадрате 
+>Это происходит при помощи сравнения количества черных пикселей и заданного числа (общее количество пикселей в квадрате, умноженное на определенный коэффициент, по умолчанию 0.003)
+4. Определение результата
+>Номера квадратов с нефтью добавляются в список. Если он оказывается непустым, то на снимке есть нефть.
 
-# Развертывыние приложения на сервере
+## Развертывыние приложения на сервере
 
-## Установка сервера
+### Установка сервера
 
 >Для начала следует установить веб-сервер для удобного отображения директорий с 
 >фотографиями после их обработки, например, [Apache](https://httpd.apache.org/).
 
-## Установка Python и библиотек
+### Установка Python и библиотек
 
 >Установите Python 3 на сервер. После этого установите необходимые для работы
 >приложения библиотеки и фреймворки с помощью менеджера пакетов pip, 
@@ -28,7 +28,7 @@ The analysis process is divided into several stages:
 >pip install numpy
 >```
 
-## Установка путей для сохранения изображений
+### Установка путей для сохранения изображений
 
 >Когда пользователь обращается к приложению, то оно загружает
 >все изображения, полученные от пользователя, в специальную директорию.
@@ -49,7 +49,7 @@ The analysis process is divided into several stages:
 >к директории, в которой будут изображения, на которых **не будут обнаружены**
 >нефтяные разливы. 
 
-## Запуск приложения
+### Запуск приложения
 
 >Загрузите файлы **main.py** и **detector.py** на сервер.<br><br>
 >Запустите приложение. Например, с помощью данной команды:
